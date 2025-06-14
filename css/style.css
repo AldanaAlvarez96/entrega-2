@@ -1,18 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Tagesschrift&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Tagesschrift&display=swap");
 
 /*!----------------HEADER----------------*/
-header nav div h1{
+header nav div h1 {
     font-family: "Tagesschrift", system-ui;
     font-size: 30px;
     color: black;
     margin-left: 20px;
     display: inline-block;
 }
+
 header nav div img {
     width: 50px;
     height: 50px;
     border-radius: 50%;
 }
+
 /**---------------MAIN-----------------------*/
 .Bienvenidos {
     width: 100%;
@@ -29,61 +31,90 @@ header nav div img {
 }
 
 main section {
-    text-align: center; /* Centra el contenido inline */
+    text-align: center;
+    /* Centra el contenido inline */
 }
-main section h3 {
+
+main section h3,
+main section p,
+section h4 {
     font-family: "Tagesschrift", system-ui;
+    text-align: center;
+}
+
+main section h3,
+section h4 {
     font-size: 26px;
-    text-align: center;
 }
+
 main section p {
-    font-family: "Tagesschrift", system-ui;
     font-size: 16px;
-    text-align: center;
 }
+
 .productos {
     display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    background-color: black;
-    gap: 20px;               /* Espacio entre los productos */
-    flex-wrap: wrap;         /* Permite que bajen si no caben en una línea */
-    padding-top: 10px;
-    padding-bottom: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
     margin-top: 30px;
-    height: 250px;
+    /* ✅ Sacamos height fijo */
 }
+
+/* ✅ Estilo general para cada producto */
 .Producto1,
 .Producto2,
 .Producto3 {
-    flex-wrap: wrap;
-    height: 250px;
-}
-
-.boton {
-    font-family: "Tagesschrift", system-ui;
-    font-size: 20px;
-    display: inline-block;      /* Necesario para padding y centrado */
-    flex-wrap: wrap;
-    margin-top: 20px;
-    padding: 10px 10px 10px 10px;
-    background-color: #39578f;
-    color: white;
-}
-section h4 {
-    font-family: "Tagesschrift", system-ui;
-    font-size: 26px;
+    width: 200px;
+    padding: 10px;
+    box-sizing: border-box;
     text-align: center;
 }
+
+/* ✅ Estilo para el botón */
+.boton {
+    font-family: "Tagesschrift", system-ui;
+    font-size: 18px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #39578f;
+    color: white;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* ✅ Centrado del contenedor mapa */
 .Mapa {
+    display: flex;
     justify-content: center;
+    margin-top: 20px;
+}
+
+/* ✅ Ajustes para pantallas chicas */
+@media (max-width: 768px) {
+
+    .Producto1,
+    .Producto2,
+    .Producto3 {
+        width: 100%;
+    }
+
+    .boton {
+        font-size: 16px;
+        width: 100%;
+    }
 }
 
 .whatsapp {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    z-index: 1000; /* Asegura que el botón esté por encima de otros elementos */
+    z-index: 1000;
+    /* Asegura que el botón esté por encima de otros elementos */
 }
+
 /*?--------------------------FOOTER --------------------------------------------*/
 
 footer {
@@ -104,13 +135,14 @@ footer a {
 footer img {
     width: 30px;
     height: 30px;
-    filter: invert(1); /* solo si el ícono es negro */
+    filter: invert(1);/* solo si el ícono es negro */
     transition: transform 0.3s ease;
 }
 
 footer img:hover {
     transform: scale(1.2);
 }
+
 /**-------------------------Sobre mi-------------------**/
 .sobre-mi {
     font-family: "Tagesschrift", system-ui;
@@ -118,13 +150,14 @@ footer img:hover {
     text-align: center;
     color: black;
 }
+
 .mi-foto {
     display: block;
-    justify-content: center; /* Centra horizontalmente */
+    justify-content: center;/* Centra horizontalmente */
     align-items: center;
-    gap: 20px;               /* Espacio entre los productos */
-    flex-wrap: wrap;         /* Permite que bajen si no caben en una línea */
-    margin:auto;
+    gap: 20px;/* Espacio entre los productos */
+    flex-wrap: wrap;/* Permite que bajen si no caben en una línea */
+    margin: auto;
     padding-top: 20px;
     padding-bottom: 20px;
     height: 200px;
@@ -153,86 +186,102 @@ section h1 {
     margin-top: 20px;
 }
 
-section h2 { 
+section h2 {
     font-family: "Tagesschrift", system-ui;
     font-size: 20px;
     margin-top: 20px;
 }
 
+/* Estilo para la sección de pasos */
 .grid-container {
-    border: 1px solid black;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr; /* Tres columnas de igual tamaño */
-    grid-template-rows: auto auto; /* Tres filas de igual tamaño */
-    gap: 0;
-    padding: 0;
-    margin: 10px;;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    gap: 20px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 900px;
+    background: #f5f5f5;
 }
 
 .grid-items {
-    background-color: white;
-    font-size: 12px;
-    font-family: "Tagesschrift", system-ui, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background: white;
+    border: 1px solid #ddd;
+    padding: 18px;
     text-align: center;
+    font-family: "Tagesschrift", system-ui, sans-serif;
+    font-size: 18px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 10px;
-    border: 1px solid black;
-}
-.grid-items img {
-    width: 200px;
-    height: 200px;
-    object-fit: cover; /* Recorta la imagen para que llene el espacio sin deformarse */
-    display: block;
 }
 
-.fundas .container{
+.grid-items img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    margin: 0 auto;
+}
+
+/* Estilo para la galería de fundas */
+.fundas .container {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
+    justify-content: space-around;
 }
-.fundas h3{
-    width: 100%;
+
+.fundas article {
+    background: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    padding: 18px 14px;
+    width: 220px;
     text-align: center;
-    font-family: "Tagesschrift", system-ui;
-    font-size: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    transition: transform 0.2s;
 }
-.container article{
-    width: 250px;
-    height: 450px;
-    border: 1px solid black;
-    margin: 20px;
-    text-align: center;
+
+.fundas article:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
-.container article img {
-    width: 250px;
-    height: 300px;
+
+.fundas article img {
+    width: 140px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
 }
 
 .fundas article h4 {
-    font-family: "Tagesschrift", system-ui;
     font-size: 20px;
+    margin: 10px 0 14px 0;
+    font-family: "Tagesschrift", system-ui, sans-serif;
 }
 
-.fundas article a {
-    font-family: "Tagesschrift", system-ui;
-    font-size: 20px;
-    padding: 10px 10px 10px 10px;
-    background-color: #39578f;
-    color: white;
-    text-decoration: none; /* Elimina el subrayado del enlace */
+.boton {
+    display: inline-block;
+    padding: 8px 22px;
+    background: #39578f;
+    color: #fff;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: "Tagesschrift", system-ui, sans-serif;
+    transition: background 0.2s;
 }
 
-
+.boton:hover {
+    background: #22345a;
+}
 
 /*------------------BOTÓN 2-----------------*/
 .boton2 {
     font-family: "Tagesschrift", system-ui;
     font-size: 20px;
-    display: flex;      /* Necesario para padding y centrado */
+    display: flex;
+    /* Necesario para padding y centrado */
     justify-content: center;
     margin-top: 30px;
     padding: 10px 20px;
@@ -254,7 +303,8 @@ section h2 {
 .fundas2 img {
     width: 150px;
     height: 150px;
-    object-fit: cover; /* recorta la imagen para que llene bien */
+    object-fit: cover;
+    /* recorta la imagen para que llene bien */
     border: 2px solid black;
     border-radius: 10px;
     transition: transform 0.3s ease;
