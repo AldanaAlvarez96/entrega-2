@@ -2,196 +2,333 @@
 
 /*!----------------HEADER----------------*/
 header nav div h1 {
-    font-family: "Tagesschrift", system-ui;
-    font-size: 30px;
-    color: black;
-    margin-left: 20px;
-    display: inline-block;
+  font-family: "Tagesschrift", system-ui;
+  font-size: 40px;
+  color: black;
+  margin-left: 20px;
+  display: inline-block;
 }
-
-header nav div img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
+header nav div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: gray; /* Fondo claro para el header */
 }
 
 /**---------------MAIN-----------------------*/
 .Bienvenidos {
-    width: 100%;
-    height: 300px;
-    text-align: center;
-    padding-top: 10px;
-    flex-wrap: wrap;
-    color: black;
-    background-image: url(../img/bienvenidos.png);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+  width: 100%;
+  height: 300px;
+  text-align: center;
+  padding-top: 10px;
+  flex-wrap: wrap;
+  color: black;
+  background-image: url(../img/bienvenidos.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.Bienvenidos h2 {
+  font-family: "Tagesschrift", system-ui;
+  font-size: 40px;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.Bienvenidos p {
+  font-family: "Tagesschrift", system-ui;
+  font-size: 20px;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+.navbar {
+  background-color: gray;
+}
+
+.navbar .nav-link {
+  color: white; /* color base */
+  transition: all 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+  background-color: white;
+  color: black !important;
+  border-radius: 5px;
+  padding: 5px 10px;
 }
 
 main section {
-    text-align: center;
-    /* Centra el contenido inline */
+  text-align: center;
+  /* Centra el contenido inline */
 }
 
 main section h3,
 main section p,
 section h4 {
-    font-family: "Tagesschrift", system-ui;
-    text-align: center;
+  font-family: "Tagesschrift", system-ui;
+  text-align: center;
+  margin-top: 20px;
 }
 
 main section h3,
 section h4 {
-    font-size: 26px;
+  font-size: 26px;
 }
 
 main section p {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 .productos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
-    margin-top: 30px;
-    /* ✅ Sacamos height fijo */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  margin-top: 30px;
+  /* ✅ Sacamos height fijo */
 }
 
 /* ✅ Estilo general para cada producto */
 .Producto1,
 .Producto2,
 .Producto3 {
-    width: 200px;
-    padding: 10px;
-    box-sizing: border-box;
-    text-align: center;
+  width: 400px;
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: center;
 }
 
 /* ✅ Estilo para el botón */
 .boton {
-    font-family: "Tagesschrift", system-ui;
-    font-size: 18px;
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #39578f;
-    color: white;
-    text-align: center;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+  font-family: "Tagesschrift", system-ui;
+  font-size: 18px;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #39578f;
+  color: white;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 /* ✅ Centrado del contenedor mapa */
 .Mapa {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
+  width: 100vw; /* 100% del ancho de la pantalla (viewport width) */
+  height: 400px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.Mapa iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
 }
 
 /* ✅ Ajustes para pantallas chicas */
 @media (max-width: 768px) {
+  .Producto1,
+  .Producto2,
+  .Producto3 {
+    width: 100%;
+  }
 
-    .Producto1,
-    .Producto2,
-    .Producto3 {
-        width: 100%;
-    }
-
-    .boton {
-        font-size: 16px;
-        width: 100%;
-    }
+  .boton {
+    font-size: 16px;
+    width: 100%;
+  }
 }
 
 .whatsapp {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 1000;
-    /* Asegura que el botón esté por encima de otros elementos */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  /* Asegura que el botón esté por encima de otros elementos */
 }
 
 /*?--------------------------FOOTER --------------------------------------------*/
 
 footer {
-    background-color: gray;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    gap: 40px;
-    padding: 20px 0;
-    margin-top: 30px;
-    margin-bottom: 30px;
+  background-color: gray;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 40px;
+  padding: 20px 0;
 }
 
 footer a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 footer img {
-    width: 30px;
-    height: 30px;
-    filter: invert(1);/* solo si el ícono es negro */
-    transition: transform 0.3s ease;
+  width: 30px;
+  height: 30px;
+  filter: invert(1); /* solo si el ícono es negro */
+  transition: transform 0.3s ease;
 }
 
 footer img:hover {
-    transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 /**-------------------------Sobre mi-------------------**/
 .sobre-mi {
-    font-family: "Tagesschrift", system-ui;
-    font-size: 30px;
-    text-align: center;
-    color: black;
+  font-family: "Tagesschrift", system-ui;
+  font-size: 30px;
+  text-align: center;
+  color: black;
 }
 
 .mi-foto {
-    display: block;
-    justify-content: center;/* Centra horizontalmente */
-    align-items: center;
-    gap: 20px;/* Espacio entre los productos */
-    flex-wrap: wrap;/* Permite que bajen si no caben en una línea */
-    margin: auto;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    height: 200px;
+  display: flex; /* convierte el section en flexbox */
+  align-items: flex-start; /* alinea la foto y el texto arriba */
+  justify-content: flex-start; /* foto a la izquierda, texto a la derecha */
+  gap: 20px; /* espacio entre foto y texto */
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.mi-foto img {
+  width: 200px; /* ancho fijo que podes ajustar */
+  height: auto; /* mantiene la proporción */
+  border-radius: 10px;
+  object-fit: cover;
 }
 
 .parrafo {
-    font-family: "Tagesschrift", system-ui;
-    font-size: 20px;
+  display: flex; /* ocupa todo el espacio restante */
+  font-family: "Tagesschrift", system-ui;
+  font-size: 20px;
+  color: black;
+  text-align: left;
+  margin-top: 50px;
+  margin-left: 10px; /* espacio entre la foto y el texto */
+  flex: 1; /* permite que el párrafo ocupe todo el espacio disponible */
+}
+
+/* 3) Responsive: en móvil, apilar verticalmente */
+@media (max-width: 768px) {
+  .mi-foto {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .mi-foto img {
+    width: 100px; /* podés hacerlo más chico en móvil */
+    margin-bottom: 15px;
+  }
+  .parrafo {
+    width: 90%;
+  }
+}
+.dibujos {
+  display: flex;
+  flex-direction: row-reverse;  /* invierte el orden: párrafo (izq), imagen (der) */
+  align-items: flex-start;      /* alinea arriba */
+  gap: 20px;                    /* espacio entre texto y dibujo */
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.dibujos img {
+  width: 240px;     /* ajustá este valor al tamaño deseado */
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.dibujos p {
+  flex: 1;          /* ocupa el espacio restante */
+  font-family: "Tagesschrift", system-ui;
+  font-size: 20px;
+  color: black;
+  text-align: left;
+  margin-top: 50px;
+}
+
+/* Responsive: en pantallas chicas, apila todo y centra */
+@media (max-width: 768px) {
+  .dibujos {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .dibujos img {
+    width: 100px;       /* más pequeño en móvil */
+    margin-bottom: 15px;
+  }
+  .dibujos p {
+    width: 90%;
+  }
+}
+.funda-destacada {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.funda-destacada img {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.funda-destacada p {
+  flex: 1;
+  font-family: "Tagesschrift", system-ui;
+  font-size: 18px;
+  color: black;
+  text-align: left;
+  margin-top: 60px;
+}
+
+
+/* Responsive: en móvil apila verticalmente */
+@media (max-width: 768px) {
+  .funda-destacada {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .funda-destacada img {
+    width: 100px;
+    margin-bottom: 15px;
+  }
+  .funda-destacada p {
+    width: 90%;
+  }
+}
+
+/*------------------ HACE TU PEDIDO -----------------*/
+main section h1 {
+    font-family: "Tagesschrift", system-ui, sans-serif;
+    font-size: 32px;
     color: black;
-    text-align: center;
-    margin: auto;
-    padding: 10px 20px 20px 20px;
+    margin-top: 40px;
 }
-
-/**------------------HACE TU PEDIDO -----------------*/
-
-main section {
-    font-family: "Tagesschrift", system-ui;
-    font-size: 20px;
+main section h2 {
+    font-family: "Tagesschrift", system-ui, sans-serif;
+    font-size: 18px;
+    color: black;
+    margin: 20px 0;
 }
-
-section h1 {
-    font-family: "Tagesschrift", system-ui;
-    font-size: 40px;
-    text-align: center;
-    margin-top: 20px;
-}
-
-section h2 {
-    font-family: "Tagesschrift", system-ui;
-    font-size: 20px;
-    margin-top: 20px;
-}
-
 /* Estilo para la sección de pasos */
 .grid-container {
     display: grid;
@@ -199,14 +336,17 @@ section h2 {
     grid-template-rows: auto auto;
     gap: 20px;
     padding: 20px;
-    margin: 20px auto;
+    margin: 30px auto;
     max-width: 900px;
     background: #f5f5f5;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
 }
 
 .grid-items {
-    background: white;
+    background: #fff;
     border: 1px solid #ddd;
+    border-radius: 10px;
     padding: 18px;
     text-align: center;
     font-family: "Tagesschrift", system-ui, sans-serif;
@@ -218,23 +358,42 @@ section h2 {
 }
 
 .grid-items img {
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     object-fit: cover;
     margin: 0 auto;
+    border-radius: 8px;
 }
-
+.main section h3 {
+    display:flex;
+    font-family: "Tagesschrift", system-ui, sans-serif;
+    font-size: 24px;
+    color: black;
+    margin-top: 20px;
+    text-align: center;
+}
 /* Estilo para la galería de fundas */
+.fundas {
+  display: flex;
+  flex-direction: column;    /* apila verticalmente */
+  align-items: center;       /* centra horizontalmente */
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
 .fundas .container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 30px;
+    margin: 30px 0;
 }
 
 .fundas article {
     background: #fff;
     border: 1px solid #ccc;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    border-radius: 14px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     padding: 18px 14px;
     width: 220px;
     text-align: center;
@@ -243,7 +402,7 @@ section h2 {
 
 .fundas article:hover {
     transform: translateY(-5px) scale(1.03);
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
 }
 
 .fundas article img {
@@ -270,24 +429,34 @@ section h2 {
     font-size: 16px;
     font-family: "Tagesschrift", system-ui, sans-serif;
     transition: background 0.2s;
+    border: none;
+    cursor: pointer;
 }
 
 .boton:hover {
     background: #22345a;
 }
 
-/*------------------BOTÓN 2-----------------*/
-.boton2 {
-    font-family: "Tagesschrift", system-ui;
-    font-size: 20px;
-    display: flex;
-    /* Necesario para padding y centrado */
-    justify-content: center;
-    margin-top: 30px;
-    padding: 10px 20px;
-    background-color: #39578f;
-    color: white;
-    text-align: center;
+/* Responsive para móviles */
+@media (max-width: 900px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: none;
+        max-width: 95vw;
+    }
+    .fundas .container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .fundas article {
+        width: 90vw;
+        max-width: 320px;
+    }
+    .fundas article img {
+        width: 100%;
+        height: auto;
+    }
 }
 
 /*------------------PEDIDOS Y CLIENTES-----------------*/
@@ -312,4 +481,66 @@ section h2 {
 
 .fundas2 img:hover {
     transform: scale(2);
+}
+/*------------------ELABORACIÓN-----------------*/
+.elaboracion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    max-width: 1200px;
+    margin-bottom: 20px;
+}
+.elaboracion h2 {
+    font-family: "Tagesschrift", system-ui, sans-serif;
+    font-size: 32px;
+    color: black;
+    margin-bottom: 20px;
+}
+.elaboracion p {
+    font-family: "Tagesschrift", system-ui, sans-serif;
+    font-size: 20px;
+    color: black;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.elaboracion .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.elaboracion .item {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+.elaboracion .item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.carousel-item img {
+  max-height: 600px;     /* Limita la altura */
+  object-fit: cover;     /* Recorta si es necesario para que no se deformen */
+  width: 100%;
+}
+.carousel-item {  
+  display: flex;
+  justify-content: center; /* Centra la imagen horizontalmente */
+  align-items: center;     /* Centra la imagen verticalmente */
+}
+.carousel-caption h5,
+.carousel-caption p {
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+  color: white; /* Asegura que el texto sea legible sobre la imagen */
+  font-family: "Tagesschrift", system-ui, sans-serif;
+  text-align: center; /* Centra el texto */
+  margin: 0; /* Elimina márgenes para un mejor ajuste */
+  padding: 10px; /* Añade un poco de espacio alrededor del texto */
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para mejorar la legibilidad */
+  border-radius: 8px; /* Bordes redondeados para un mejor estilo */
 }
