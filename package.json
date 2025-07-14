@@ -1,0 +1,22 @@
+{
+  "name": "proyecto-2",
+  "version": "1.0.0",
+  "description": "Proyecto con scss",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AldanaAlvarez96/entrega-2.git"
+  },
+  "keywords": [
+    "scss"
+  ],
+  "author": "Aldana Alvarez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AldanaAlvarez96/entrega-2/issues"
+  },
+  "homepage": "https://github.com/AldanaAlvarez96/entrega-2#readme"
+}

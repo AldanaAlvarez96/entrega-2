@@ -1,0 +1,20 @@
+.boton {
+    font-family: $fuente-principal;
+    font-size: 18px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: $color-principal;
+    color: white;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.2s;
+    &:hover {
+        background: $color-secundario;
+    }
+} .boton {
+    font-size: 16px;
+    width: 100%;
+  }
+

@@ -1,0 +1,15 @@
+.productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    margin-top: 30px;
+  }
+
+.Producto1, .Producto2, .Producto3 {
+  width: 400px;
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: center;
+}

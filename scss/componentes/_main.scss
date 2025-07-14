@@ -1,0 +1,29 @@
+main {
+  section {
+    text-align: center;
+
+    h1, h2, h3, h4, p {
+        font-family: $fuente-principal;
+    }
+
+    h1 {
+        font-size: 32px;
+        color: $color-black;
+        margin-top: 40px;
+    }
+
+    h2 {
+        font-size: 18px;
+        color: $color-black;
+        margin: 20px 0;
+    }
+
+    h3, h4 {
+        font-size: 26px;
+        margin-top: 20px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+}}

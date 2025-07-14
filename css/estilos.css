@@ -1,0 +1,561 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Tagesschrift&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header nav div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+header nav div h1 {
+  font-size: 40px;
+  margin-left: 20px;
+  display: inline-block;
+}
+
+.Bienvenidos {
+  width: 100%;
+  height: 300px;
+  text-align: center;
+  padding-top: 10px;
+  flex-wrap: wrap;
+  color: black;
+  background: url(../img/bienvenidos.png) center/cover no-repeat fixed;
+}
+.Bienvenidos h2 {
+  font-family: "Tagesschrift", system-ui, sans-serif;
+  font-size: 40px;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.Bienvenidos p {
+  font-family: "Tagesschrift", system-ui, sans-serif;
+  font-size: 20px;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.navbar {
+  background-color: gray;
+}
+.navbar .nav-link {
+  color: white;
+  transition: all 0.3s ease;
+}
+.navbar .nav-link:hover {
+  background-color: white;
+  color: black !important;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+.navbar-brand {
+  color: white;
+  font-family: "Tagesschrift", system-ui, sans-serif;
+  font-size: 24px;
+}
+.navbar-brand:hover {
+  color: white;
+}
+
+main section {
+  text-align: center;
+}
+main section h1, main section h2, main section h3, main section h4, main section p {
+  font-family: "Tagesschrift", system-ui, sans-serif;
+}
+main section h1 {
+  font-size: 32px;
+  color: black;
+  margin-top: 40px;
+}
+main section h2 {
+  font-size: 18px;
+  color: black;
+  margin: 20px 0;
+}
+main section h3, main section h4 {
+  font-size: 26px;
+  margin-top: 20px;
+}
+main section p {
+  font-size: 16px;
+}
+
+.productos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  margin-top: 30px;
+}
+
+.Producto1, .Producto2, .Producto3 {
+  width: 400px;
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.boton {
+  font-family: "Tagesschrift", system-ui, sans-serif;
+  font-size: 18px;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #39578f;
+  color: white;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.boton:hover {
+  background: #22345a;
+}
+
+.boton {
+  font-size: 16px;
+  width: 100%;
+}
+
+.Mapa {
+  width: 100vw;
+  height: 400px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.Mapa iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+footer {
+  background-color: gray;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 40px;
+  padding: 20px 0;
+}
+footer a {
+  text-decoration: none;
+}
+footer img {
+  width: 30px;
+  height: 30px;
+  filter: invert(1);
+  transition: transform 0.3s ease;
+}
+footer img:hover {
+  transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+  .Producto1,
+  .Producto2,
+  .Producto3 {
+    width: 100%;
+  }
+  .boton {
+    font-size: 16px;
+    width: 100%;
+  }
+}
+/* Responsive */
+@media (max-width: 900px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    max-width: 95vw;
+  }
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto;
+  gap: 20px;
+  padding: 20px;
+  margin: 30px auto;
+  max-width: 900px;
+  background: #f5f5f5;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+}
+.grid-container .grid-items {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 18px;
+  text-align: center;
+  font-family: "Tagesschrift", system-ui, sans-serif;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.grid-container .grid-items img {
+  width: 100px;
+  height: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+.fundas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+.fundas .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin: 30px 0;
+}
+.fundas .container article {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  padding: 18px 14px;
+  width: 220px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+.fundas .container article:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+.fundas .container article img {
+  width: 140px;
+  height: 180px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+.fundas .container article h4 {
+  font-size: 20px;
+  margin: 10px 0 14px 0;
+  font-family: "Tagesschrift", system-ui, sans-serif;
+}
+
+.boton {
+  display: inline-block;
+  padding: 8px 22px;
+  background: #39578f;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: "Tagesschrift", system-ui, sans-serif;
+  transition: background 0.2s;
+  border: none;
+  cursor: pointer;
+}
+.boton:hover {
+  background: #22345a;
+}
+
+/* Responsive para móviles */
+@media (max-width: 900px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+    max-width: 95vw;
+  }
+  .fundas .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .fundas .container article {
+    width: 90vw;
+    max-width: 320px;
+  }
+  .fundas .container article img {
+    width: 100%;
+    height: auto;
+  }
+}
+.fundas2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  justify-items: center;
+  background-color: #f9f9f9;
+}
+.fundas2 img {
+  width: 150px;
+  height: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 2px solid black;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.fundas2 img:hover {
+  transform: scale(2);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  z-index: 10; /* para que esté encima de otras imágenes */
+}
+
+h2 {
+  text-align: center;
+  font-family: "Tagesschrift", system-ui, sans-serif;
+  margin-bottom: 10px;
+}
+
+.descripcion-pedidos {
+  text-align: center;
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Responsive para móviles */
+@media (max-width: 600px) {
+  .fundas2 {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+  .fundas2 img {
+    width: 120px;
+    height: 120px;
+  }
+}
+.sobre-mi {
+  font-family: "Tagesschrift", system-ui;
+  font-size: 40px;
+  text-align: center;
+  color: black;
+}
+
+.mi-foto {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+.mi-foto img {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+.mi-foto .parrafo {
+  flex: 1;
+  font-family: "Tagesschrift", system-ui;
+  font-size: 20px;
+  color: black;
+  text-align: left;
+  margin-top: 50px;
+}
+@media (max-width: 768px) {
+  .mi-foto {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .mi-foto img {
+    width: 100px;
+    margin-bottom: 15px;
+  }
+  .mi-foto .parrafo {
+    width: 90%;
+  }
+}
+
+.dibujos {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+.dibujos img {
+  width: 240px;
+  height: auto;
+  border-radius: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.dibujos p {
+  flex: 1;
+  font-family: "Tagesschrift", system-ui;
+  font-size: 20px;
+  color: black;
+  text-align: left;
+  margin-top: 50px;
+}
+@media (max-width: 768px) {
+  .dibujos {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .dibujos img {
+    width: 100px;
+    margin-bottom: 15px;
+  }
+  .dibujos p {
+    width: 90%;
+  }
+}
+
+.funda-destacada {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+.funda-destacada img {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.funda-destacada p {
+  flex: 1;
+  font-family: "Tagesschrift", system-ui;
+  font-size: 20px;
+  color: black;
+  text-align: left;
+  margin-top: 60px;
+}
+@media (max-width: 768px) {
+  .funda-destacada {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .funda-destacada img {
+    width: 100px;
+    margin-bottom: 15px;
+  }
+  .funda-destacada p {
+    width: 90%;
+  }
+}
+
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+.whatsapp a {
+  display: block;
+  width: 60px;
+  height: 60px;
+  background: #39578f;
+  color: white;
+  text-align: center;
+  line-height: 60px;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s;
+}
+.whatsapp a:hover {
+  background: #2a416b;
+}
+.whatsapp img {
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
+}
+
+.elaboracion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  max-width: 1200px;
+  margin-bottom: 20px;
+}
+.elaboracion h2 {
+  font-family: "Tagesschrift", system-ui, sans-serif;
+  font-size: 32px;
+  color: black;
+  margin-bottom: 20px;
+}
+.elaboracion p {
+  font-family: "Tagesschrift", system-ui, sans-serif;
+  font-size: 20px;
+  color: black;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.elaboracion .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.elaboracion .item {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+.elaboracion .item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.elaboracion .carousel-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.elaboracion .carousel-item img {
+  max-height: 600px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+.elaboracion .carousel-item .carousel-caption h5,
+.elaboracion .carousel-item .carousel-caption p {
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+  color: white;
+  font-family: "Tagesschrift", system-ui, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+}/*# sourceMappingURL=estilos.css.map */
