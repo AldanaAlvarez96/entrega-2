@@ -543,7 +543,7 @@ h2 {
   align-items: center;
 }
 .elaboracion .carousel-item img {
-  max-height: 600px;
+  max-height: 400px;
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
